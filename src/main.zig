@@ -20,7 +20,7 @@ const TextBox = struct {
     pos: Position,
     text: []const u8,
     fn draw(self: *const @This(), term: *tty.Terminal) !void {
-        const border = Border{ .width = self.width, .height = self.height, .pos = self.pos, .borderChar = 'O' };
+        const border = Border{ .width = self.width, .height = self.height, .pos = self.pos, .borderChar = '*' };
         try border.draw(term);
         try term.moveCursor(self.pos.y + 1, self.pos.x + 1);
         try term.writer.writeAll(self.text);
