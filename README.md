@@ -1,2 +1,2 @@
 # butter
-A TUI library written in zig
+A TUI library
